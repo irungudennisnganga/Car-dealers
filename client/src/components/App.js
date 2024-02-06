@@ -20,27 +20,23 @@ function App() {
   return (
     <>
       <NavBar user={user} setUser={setUser} />
-      {/* <main>
+      <main>
         {user ? (
           <Routes>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/"element={<Home user={user}/>}/>
           </Routes>
         ) : (
           <Routes>
-            <Route path="/signup">
-              <SignUp setUser={setUser} />
-            </Route>
-            <Route path="/login">
-              <Login setUser={setUser} />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/signup" element={<SignUp setUser={setUser} />}/>
+              
+            <Route path="/login" element={<Login setUser={setUser} />} />
+            
+            <Route path="/" element={<Home />} />
+              
+            
           </Routes>
         )}
-      </main> */}
+      </main>
     </>
   );
 }
