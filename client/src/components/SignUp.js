@@ -27,7 +27,7 @@ function SignUp({ setUser }) {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1>Sign Up 🎁</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -52,7 +52,7 @@ function SignUp({ setUser }) {
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Sign Up 📡</button>
       </form>
     </React.Fragment>
   );

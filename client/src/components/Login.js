@@ -22,7 +22,7 @@ function Login({ setUser }) {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
+        <h1>Login ✔</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -39,7 +39,7 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Login🔏</button>
       </form>
     </React.Fragment>
   );
