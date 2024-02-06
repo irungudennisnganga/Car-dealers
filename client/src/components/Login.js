@@ -6,23 +6,28 @@ function Login({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
+    if (username && password){
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((user) => setUser(user));
+        }
+      });
+    } else {
+      window.alert("Enter password and username to continue>>>")
+    }
+  
   }
 
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
+        <h1>Login ✔</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -39,7 +44,7 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Login🔏</button>
       </form>
     </React.Fragment>
   );

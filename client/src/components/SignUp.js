@@ -7,27 +7,32 @@ function SignUp({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
+    if (username && password && passwordConfirmation){
+      fetch("/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          password_confirmation: passwordConfirmation,
+        }),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((user) => setUser(user));
+        }
+      });
+    } else {
+      window.alert("Fill the information to create an account with us!")
+    }
+   
   }
 
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1>Sign Up 🎁</h1>
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -52,7 +57,7 @@ function SignUp({ setUser }) {
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Sign Up 📡</button>
       </form>
     </React.Fragment>
   );
