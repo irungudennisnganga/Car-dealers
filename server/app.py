@@ -42,7 +42,7 @@ class CheckSession(Resource):
             user=User.query.filter(User.id == session['user_id']).first()
 
             return user.to_dict(), 200
-        return {}, 204
+        return {}, 404
         
 class Login(Resource):
    def post(self):
