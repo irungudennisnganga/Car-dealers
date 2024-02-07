@@ -48,6 +48,10 @@ class Car(db.Model, SerializerMixin):
     engine_number =db.Column(db.String , nullable=False)
     millage =db.Column(db.Integer, nullable=False)
     images =db.Column(db.String, nullable=False)
+    engine_size =db.Column(db.String )
+    description =db.Column(db.String)
+    fuel_type =db.Column(db.String )
+    price =db.Column(db.Integer)
     created_at =db.Column(db.DateTime, server_default=db.func.now())
     
     cars =db.relationship("Comment", backref='cars')
