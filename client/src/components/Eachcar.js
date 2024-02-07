@@ -1,20 +1,23 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
-const navigate =useNavigate()
+import { useNavigate } from 'react-router-dom'
+
+function Eachcar({cars}) {
+
+    const navigate =useNavigate()
  
-   function onHandleClick(id) {
-        // console.log(id)
-        navigate(`/cars/${id}`)
-   }
+    function onHandleClick(id) {
+         // console.log(id)
+         navigate(`/cars/${id}`)
+ }
 
     
   return (
   
     <div>
-        <div onClick={ () =>  onHandleClick(cars.id)}   className="card">
+        <div    className="card">
        <div className="image-wrapper">
      
-          <img  src={cars.images} alt='bot' />
+          <img onClick={ () =>  onHandleClick(cars.id)} src={cars.images} alt='bot' />
      
          </div>
            <div className="text-box-wrapper">
