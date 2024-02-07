@@ -135,7 +135,7 @@ form button[type="submit"]:hover {
   border-radius: 4px;
   border: none;
 }
-.heading{
+.heading-logout{
   text-align: center;
   color: red;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
