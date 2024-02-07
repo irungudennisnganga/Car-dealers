@@ -1,7 +1,7 @@
-
+import Allcars from "./Allcars";
 function Home({ user }) {
   if (user) {
-    return <h1>hi</h1>
+    return <Allcars />
     
   } else {
     return <h1>Login or Sign Up</h1>;
