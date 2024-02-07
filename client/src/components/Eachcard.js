@@ -44,7 +44,7 @@ function Card() {
             <h3>COMMENTS</h3>
                     {
                   comment.map(one =>{
-                    if (one.user_id ===id){
+                    if (one.user_id ==id){
                       return<p>{one.body}</p>
                     }
                     
