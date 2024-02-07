@@ -22,9 +22,9 @@ function Eachcar({cars}) {
          </div>
            <div className="text-box-wrapper">
               <div className="text-box">
-                <h3 className="heading"> {cars.name}  </h3>
-                <p className="text"> {cars.type} </p>
-                <p className="text"> {cars.price}  </p>
+                <h3 className="heading"><b>Name </b> :{cars.name}  </h3>
+                <p className="text"><b>Type </b>: {cars.type} </p>
+                <p className="text"><b>Price</b> : {cars.price}  </p>
              
                 
              </div>
