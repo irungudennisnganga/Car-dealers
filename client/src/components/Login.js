@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
+
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -27,7 +27,7 @@ function Login({ setUser }) {
 
   return (
     <React.Fragment>
-      <form onSubmit={handleSubmit}>
+      <form className="form-get-in" onSubmit={handleSubmit}>
         <h1>Login ✔</h1>
         <label htmlFor="username">Username</label>
         <input
@@ -47,7 +47,7 @@ function Login({ setUser }) {
         />
         <button type="submit">Login🔏</button>
       </form>
-      <Footer/>
+      
     </React.Fragment>
   );
 }

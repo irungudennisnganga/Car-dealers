@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
+
 
 function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
@@ -32,7 +32,7 @@ function SignUp({ setUser }) {
 
   return (
     <React.Fragment>
-      <form onSubmit={handleSubmit}>
+      <form className="form-get-in" onSubmit={handleSubmit}>
         <h1>Sign Up 🎁</h1>
         <label htmlFor="username">Username</label>
         <input
@@ -60,7 +60,7 @@ function SignUp({ setUser }) {
         />
         <button type="submit">Sign Up 📡</button>
       </form>
-      <Footer/>
+      
     </React.Fragment>
   );
 }

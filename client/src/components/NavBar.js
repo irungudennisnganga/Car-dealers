@@ -15,6 +15,7 @@ function NavBar({ user, setUser }) {
       <div className="main">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/cars">Add car</Link>
       </div>
       <div>
         {user ? (
@@ -23,6 +24,7 @@ function NavBar({ user, setUser }) {
           <>
             <Link to="/signup">Signup</Link>
             <Link to="/login">Login</Link>
+            
           </>
         )}
       </div>

@@ -45,7 +45,7 @@ main {
   margin: 1rem;
 }
 
-form {
+.form-get-in {
   background-color: rgb(31, 97, 240);
   border: 1px solid ;
   display: flex;
@@ -103,7 +103,12 @@ form button[type="submit"]:hover {
   height: 100%; 
   object-fit: cover; 
 }
-
+.car{
+  width: 100%; 
+  max-width: 1000px; 
+  max-height: 1000px;
+  margin-top: 20px; 
+}
 .text-box-wrapper {
   
   border: 1px solid #ddd;
@@ -186,4 +191,34 @@ form button[type="submit"]:hover {
 .comment-delete:hover {
   cursor: pointer;
   color: red; 
+}
+
+footer {
+  
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center; 
+}
+
+footer p {
+
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+footer p:last-child {
+
+  margin-bottom: 0;
+}
+
+footer .contact-number {
+
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
+  }
 }
