@@ -5,6 +5,7 @@ function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [email, setEmail] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,6 +17,7 @@ function SignUp({ setUser }) {
         },
         body: JSON.stringify({
           username,
+          email,
           password,
           password_confirmation: passwordConfirmation,
         }),
@@ -41,6 +43,14 @@ function SignUp({ setUser }) {
           autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+        <label htmlFor="password">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          autoComplete="email"
         />
         <label htmlFor="password">Password</label>
         <input

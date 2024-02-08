@@ -16,6 +16,10 @@ code {
   columns: 2;
   
 }
+.card{
+  display: flex;
+  flex-wrap: wrap
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +48,18 @@ header button {
 main {
   margin: 1rem;
 }
-
+.form {
+  background-color: rgb(31, 97, 240);
+  border: 1px solid ;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+  border-radius: 10px;
+  border: none;
+  height: 200px;
+}
 .form-get-in {
   background-color: rgb(31, 97, 240);
   border: 1px solid ;
@@ -55,8 +70,10 @@ main {
   padding: 0 1rem 1rem;
   border-radius: 10px;
   border: none;
-  height: 350px;
+  height: 400px;
 }
+
+
 .main{
   display: flex;
   justify-content: space-between;

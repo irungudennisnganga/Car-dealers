@@ -22,11 +22,12 @@ class Signup(Resource):
      def post(self):
 
         username = request.get_json()['username']
+        email =request.get_json()['email']
         password = request.get_json()['password']
 
         if username and password:
 
-            new_user = User(username=username)
+            new_user = User(username=username ,email=email)
             new_user.password_hash = password
             db.session.add(new_user)
             db.session.commit()
@@ -47,6 +48,7 @@ class CheckSession(Resource):
 class Login(Resource):
    def post(self):
         username = request.get_json()['username']
+        
         password = request.get_json()['password']
 
         user = User.query.filter(User.username == username).first()
@@ -73,6 +75,60 @@ class CarsData(Resource):
         )
         
         return response
+    def post(self):
+        
+        name = request.get_json()['name'] 
+        type  = request.get_json()['type']
+        model = request.get_json()['model']
+        engine_number = request.get_json()['engine_number']
+        millage = request.get_json()['millage']
+        images = request.get_json()['images']
+        engine_size = request.get_json()['engine_size']
+        description = request.get_json()['description']
+        fuel_type = request.get_json()['fuel_type']
+        price = request.get_json()['price']
+
+        if name is None or type  is None or model is None or engine_number is None or millage is None or images is None or engine_size is None or description is None or fuel_type is None or price is None :
+            return make_response(jsonify({'errors': ['Missing required data']}), 400)
+        
+        new_car = Car(name=name,
+                               type =type ,
+                               model=model,
+                               engine_number=engine_number,
+                               millage=millage,
+                               images=images,
+                               engine_size=engine_size,
+                               description=description,
+                               fuel_type=fuel_type,
+                               price=price
+                               )
+
+        
+        db.session.add(new_car)
+        db.session.commit()
+        
+        response_dict={
+            'id':new_car.id,
+            'name':new_car.name,
+            'type ':new_car.type,
+            'model':new_car.model,
+            'engine_number':new_car.engine_number,
+            'millage':new_car.millage,
+            'images':new_car.images,
+            'engine_size':new_car.engine_size,
+            'description':new_car.description,
+            'fuel_type':new_car.fuel_type,
+            'price':new_car.price,
+
+        }
+        
+        response = make_response(
+            jsonify(response_dict),
+            200
+        )
+        
+        return response
+
 
 
 class CarsFilter(Resource):
@@ -100,10 +156,10 @@ class CommentsData(Resource):
         return response
     
     def post(self):
-        data = request.json
-        body = data['body'] 
-        car_id = data['car_id']
-        user_id = data['user_id']
+        
+        body = request.get_json()['body'] 
+        car_id = request.get_json()['car_id']
+        user_id = request.get_json()['user_id']
 
         if body is None or car_id is None or user_id is None:
             return make_response(jsonify({'errors': ['Missing required data']}), 400)
