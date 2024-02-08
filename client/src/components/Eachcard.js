@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import {useParams } from 'react-router-dom'
+import Comment from './Comment'
 function Card() {
     const [car, setcar]=useState([])
     const [comment,setcomment]=useState([])
@@ -52,7 +53,9 @@ function Card() {
              </div>
            </div>
            <div>
+
            <h3>COMMENTS</h3>
+           <Comment/>
             {
                  comment.map(one => {
                   if (one.user_id == id) {
