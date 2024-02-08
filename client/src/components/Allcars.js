@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Eachcar from './Eachcar'
+import Footer from './Footer'
 function Allcars() {
     const [cars, setcars]=useState([])
     
@@ -19,7 +20,9 @@ function Allcars() {
                return <Eachcar cars={car} key={car.id}  />
             })
         }
+        <Footer/>
     </div>
+
 
   )
 }

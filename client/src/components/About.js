@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 
 
 function About() {
@@ -16,6 +17,8 @@ function About() {
           <img src='https://media.licdn.com/dms/image/C4D12AQFaU1CfSej8yQ/article-cover_image-shrink_720_1280/0/1637856808786?e=2147483647&v=beta&t=AGx64YX3qEnzG7VzVMXadRfbCGjbY_a6SEN4s5JHMag' />
         </section>
       </main>
+      <Footer/>
+
     </>
   );
 }
