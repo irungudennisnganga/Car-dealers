@@ -16,6 +16,17 @@ function Card() {
     .then(r => r.json())
     .then(comment =>setcomment(comment))
    },[])
+
+   function handleClick(id){
+    console.log(id)
+    fetch(`/comments/${id}`,{
+      method:"DELETE",
+      headers:{
+        "content-Type":"application.json"
+      }
+    })
+    setcomment(comment)
+   }
     
   return (
   
@@ -41,25 +52,22 @@ function Card() {
              </div>
            </div>
            <div>
-            <h3>COMMENTS</h3>
-                    {
-                  comment.map(one =>{
-                    if (one.user_id ==id){
-                      return<p>{one.body}</p>
-                    }
-                    
-                    
-                  })
-                }
-
-               </div>
-            
+           <h3>COMMENTS</h3>
+            {
+                 comment.map(one => {
+                  if (one.user_id == id) {
+                    return (
+                      <div key={one.id} className="comment">
+                        <p className="comment-text">{one.body}</p>
+                        <button onClick={() => handleClick(one.id)} className="comment-delete">delete</button>
+                      </div>
+                    );
+                  }
+                })
+            }
+            </div>
            </div>
-          
-        </div>
-        
-       
-       
+        </div>     
   )
 }
 
