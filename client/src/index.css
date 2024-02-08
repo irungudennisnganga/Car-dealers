@@ -147,4 +147,43 @@ form button[type="submit"]:hover {
   font-size: larger;
   
 }
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 10px; 
+  padding: 5px; 
+  border-bottom: 1px solid #ddd; 
+}
+.comments-container {
+  display: flex; 
+  flex-direction: column;
+  margin: 10px; 
+  border: 1px solid #ddd; 
+  padding: 5px;
+}
 
+.comment {
+  margin-bottom: 10px; 
+  padding: 5px; 
+  border-bottom: 1px solid #ddd; 
+  display: flex; 
+  align-items: center; 
+}
+
+.comment p {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.comment-delete {
+  border: none;
+  background-color: transparent; 
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.comment-delete:hover {
+  cursor: pointer;
+  color: red; 
+}
