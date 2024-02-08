@@ -58,7 +58,7 @@ function Card() {
            <Comment/>
             {
                  comment.map(one => {
-                  if (one.user_id == id) {
+                  if (one.id == id) {
                     return (
                       <div key={one.id} className="comment">
                         <p className="comment-text">{one.body}</p>

@@ -1,8 +1,8 @@
-"""added user, car and comment table
+"""added user, comment and car table 
 
-Revision ID: 2f4615ab67fd
+Revision ID: 3b617add0abc
 Revises: 
-Create Date: 2024-02-06 11:27:41.534003
+Create Date: 2024-02-08 23:50:15.128400
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2f4615ab67fd'
+revision = '3b617add0abc'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -26,12 +26,17 @@ def upgrade():
     sa.Column('engine_number', sa.String(), nullable=False),
     sa.Column('millage', sa.Integer(), nullable=False),
     sa.Column('images', sa.String(), nullable=False),
+    sa.Column('engine_size', sa.String(), nullable=True),
+    sa.Column('description', sa.String(), nullable=True),
+    sa.Column('fuel_type', sa.String(), nullable=True),
+    sa.Column('price', sa.Integer(), nullable=True),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(), nullable=True),
+    sa.Column('email', sa.String(), nullable=False),
     sa.Column('_password_hash', sa.String(), nullable=True),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.PrimaryKeyConstraint('id')

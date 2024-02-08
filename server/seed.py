@@ -14,8 +14,8 @@ with app.app_context():  # Create an application context
         db.session.query(User).delete()  # Delete users last (due to foreign keys)
 
     # Create sample users
-    user1 = User(username="johndoe", password_hash="securepassword")
-    user2 = User(username="janesmith", password_hash="anotherpassword")
+    user1 = User(username="johndoe", password_hash="securepassword" ,email="johndoe@user.com")
+    user2 = User(username="janesmith", password_hash="anotherpassword", email="janesmith@user.com")
 
     # Create sample cars
     car1 = Car(name="Toyota Camry",price=10000000, fuel_type='Unleaded Petrol' ,description='2.0L, 4 SPEED AUTOMATIC,color Red, 1990',engine_size='2000 cc',type="Sedan", model="1990", engine_number="123456", millage=25000, images="https://images.pexels.com/photos/205337/pexels-photo-205337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
