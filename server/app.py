@@ -132,6 +132,7 @@ class CommentsData(Resource):
 
 
 class CommentById(Resource):
+   
    def delete(self,id):
         comment =Comment.query.filter_by(id=id).first()
        
