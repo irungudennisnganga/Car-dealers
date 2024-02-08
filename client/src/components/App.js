@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Eachcard from "./Eachcard";
 import About from "./About";
+import Addcar from "./Addcar"
 function App() {
   const [user, setUser] = useState(null);
 
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/"element={<Home user={user}/>}/>
             <Route path="/cars/:id" element={<Eachcard />} />
+            <Route path="/cars" element={<Addcar />} />
             <Route path="/about" element={<About />} />
           </Routes>
         ) : (

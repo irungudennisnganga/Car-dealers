@@ -1,0 +1,12 @@
+.event-form{
+    background-color: rgb(31, 97, 240);
+    border: 1px solid ;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 1rem 1rem;
+    border-radius: 10px;
+    border: none;
+  
+  }

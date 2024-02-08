@@ -1,0 +1,42 @@
+
+  
+  section {
+    width: 80%;
+    max-width: 1500px; 
+    margin: 20px auto;
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #f2f2f2; 
+  }
+  
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px; 
+  }
+  
+  p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  img {
+    width: 100%; 
+    max-width: 1500px; 
+    margin-top: 20px; 
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    section {
+      width: 100%;
+    }
+  }
+  
