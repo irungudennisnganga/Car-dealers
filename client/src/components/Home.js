@@ -2,7 +2,7 @@ import Allcars from "./Allcars";
 import React  from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-
+import './Home.css'
 function Home({ user }) {
   if (user) {
     return <Allcars />
