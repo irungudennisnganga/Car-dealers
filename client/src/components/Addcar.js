@@ -44,7 +44,7 @@ const Addcar = () => {
 
   return (
     <div className="event-form-container">
-      <h2>Create Car</h2>
+    
       <form  onSubmit={handleSubmit} className="event-form">
         <label>Name :</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -56,6 +56,7 @@ const Addcar = () => {
         <input type="text" value={model} onChange={(e) => setModel(e.target.value)} required />
         <br />
         <label>Engine Number:
+        <br />  
         <input type="text" value={engine_number} onChange={(e) => setEngine(e.target.value)} /></label>
         <br />
         <label>Engine Size:</label>

@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import {useParams } from 'react-router-dom'
+import './Comments.css'
 function Comment() {
 
 let user_id=2
@@ -26,7 +27,7 @@ let user_id=2
     .then(response => {
       response.json();
    })
-
+ 
   }
 
   return (

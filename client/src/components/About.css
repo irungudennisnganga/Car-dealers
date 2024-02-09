@@ -1,42 +1,41 @@
+main {
+  width: 100%; /* Ensure content fills the viewport */
+  margin: 0 auto; /* Horizontally center the content */
+  padding: 20px; /* Provide some breathing room */
+}
 
-  
+section {
+  background-color: #f0f0f0; /* Light background for the section */
+  padding: 30px; /* Add padding around the content */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px; /* Limit width on wider screens */
+  margin: 0 auto; /* Center the section horizontally */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em; /* Increase heading size */
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em; /* Increase paragraph size slightly */
+  line-height: 1.5; /* Add space between lines */
+  margin-bottom: 15px;
+}
+
+img {
+  width: 100%; /* Display image full width */
+  margin-top: 20px; /* Add space above the image */
+}
+
+@media (max-width: 768px) {
+  /* Optional styles for smaller screens */
   section {
-    width: 80%;
-    max-width: 1500px; 
-    margin: 20px auto;
-    padding: 20px; 
-    border: 1px solid #ddd; 
-    border-radius: 5px; 
-    background-color: #f2f2f2; 
+    padding: 20px; /* Reduce padding on smaller screens */
   }
-  
-
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 10px; 
-  }
-  
   p {
-    font-size: 16px; 
-    line-height: 1.5; 
-    margin-bottom: 15px; 
+    font-size: 1em; /* Adjust paragraph size for mobile */
   }
-  
-  p:last-child {
-    margin-bottom: 0;
-  }
-  
-  img {
-    width: 100%; 
-    max-width: 1500px; 
-    margin-top: 20px; 
-  }
-  
-  
-  
-  @media (max-width: 768px) {
-    section {
-      width: 100%;
-    }
-  }
-  
+}

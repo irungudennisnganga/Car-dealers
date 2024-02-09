@@ -1,0 +1,47 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #f0f0f0; 
+  }
+  
+ 
+  .main {
+    display: flex;
+    align-items: center; 
+  }
+  
+  
+  a {
+    text-decoration: none; 
+    color: #333; 
+    margin-right: 15px; 
+  }
+  
+  
+  a.active {
+    color: #007bff; 
+    font-weight: bold; 
+  }
+  
+  
+  div:last-child {
+    display: flex;
+    align-items: center;
+  }
+  
+  button, a:last-child { 
+    background-color: #007bff; 
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    color: white; 
+    cursor: pointer; 
+  }
+
+  button:hover, a:last-child:hover {
+    opacity: 0.8; 
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Eachcar from './Eachcar'
 import Footer from './Footer'
+import './Allcars.css'
 function Allcars() {
     const [cars, setcars]=useState([])
     
@@ -13,15 +14,19 @@ function Allcars() {
    
     
   return (
-    <div>
+    <>
+        <div className='all-cars'>
           
-        {
-            cars.map(car => {
-               return <Eachcar cars={car} key={car.id}  />
-            })
-        }
-        <Footer/>
-    </div>
+          {
+              cars.map(car => {
+                 return <Eachcar cars={car} key={car.id}  />
+              })
+          }
+          
+      </div>
+      <Footer/>
+    </>
+
 
 
   )

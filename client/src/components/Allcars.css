@@ -1,0 +1,7 @@
+.all-cars{
+  
+   display: flex;
+   flex-wrap: wrap;
+   flex: 1 0 50%; /* Equal widths, minimum width of 50% */
+   margin: 10px;
+}
