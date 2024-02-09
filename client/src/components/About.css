@@ -1,41 +1,43 @@
-main {
-  width: 100%; /* Ensure content fills the viewport */
-  margin: 0 auto; /* Horizontally center the content */
-  padding: 20px; /* Provide some breathing room */
-}
 
+main{
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 20px; 
+ 
+}
 section {
-  background-color: #f0f0f0; /* Light background for the section */
-  padding: 30px; /* Add padding around the content */
-  border-radius: 5px; /* Slightly rounded corners */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 800px; /* Limit width on wider screens */
-  margin: 0 auto; /* Center the section horizontally */
+  background-color: #f0f0f0; 
+  padding: 30px; 
+  border-radius: 5px; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+  max-width: 800px; 
+  margin: 0 auto; 
+   color: blue;
 }
 
 h1 {
   text-align: center;
-  font-size: 2em; /* Increase heading size */
+  font-size: 2em; 
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.1em; /* Increase paragraph size slightly */
-  line-height: 1.5; /* Add space between lines */
+  font-size: 1.1em;
+  line-height: 1.5;
   margin-bottom: 15px;
 }
 
 img {
-  width: 100%; /* Display image full width */
-  margin-top: 20px; /* Add space above the image */
+  width: 100%; 
+  margin-top: 20px; 
 }
 
 @media (max-width: 768px) {
-  /* Optional styles for smaller screens */
+ 
   section {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 20px;
   }
   p {
-    font-size: 1em; /* Adjust paragraph size for mobile */
+    font-size: 1em; 
   }
 }

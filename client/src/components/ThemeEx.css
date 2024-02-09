@@ -1,0 +1,27 @@
+.theme-changer {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .theme-changer label {
+    margin-right: 5px;
+    color: rgb(50, 50, 238);
+  }
+  
+  .theme-changer select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .light {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .dark {
+    background-color: #474646;
+    color: #fff;
+  }
+  

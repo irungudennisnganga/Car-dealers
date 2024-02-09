@@ -9,6 +9,7 @@ footer {
     flex-wrap: wrap; 
     max-width: 1000px; 
     margin: 0 auto; 
+    color: blue;
   }
   
   .contact-info,
@@ -31,10 +32,12 @@ footer {
   .social-media ul {
     list-style: none; 
     padding: 0;
+    color: blue;
   }
   
   .social-media li {
     margin-bottom: 10px;
+    color: blue;
   }
   
   .social-media i {
@@ -45,6 +48,7 @@ footer {
   .copyright p {
     text-align: center;
     font-size: 1.0em; 
+    color: blue;
   }
   
   
