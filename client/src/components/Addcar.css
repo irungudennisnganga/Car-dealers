@@ -27,7 +27,7 @@
 
 
 .event-form input[type="text"] {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -42,4 +42,13 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
+}
+@media (max-width: 768px){
+  .event-form-container {
+    width: 280px;
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
 }

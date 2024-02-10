@@ -44,7 +44,7 @@
     .form {
       display: flex;
       flex-direction: column;
-      width: 300px;
+      width: 280px;
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 5px;
