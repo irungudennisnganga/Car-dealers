@@ -19,7 +19,7 @@ function Card() {
     .then(r => r.json())
     .then(comment =>setcomment(comment))
    },[])
-
+   
    function handleClick(id){
     console.log(id)
     fetch(`/comments/${id}`,{
@@ -35,7 +35,7 @@ function Card() {
   
     <>
     <div>
-        <div   className="card">
+        <div className="card">
        <div className="image-wrapper">
      
           <img src={car.images} alt='bot' />
@@ -55,8 +55,6 @@ function Card() {
            </div>
            <div>
 
-           
-          
             </div>
            
            </div>
@@ -66,7 +64,7 @@ function Card() {
           <Comment  /><br />
            {
                 comment.map(one => {
-                 if (one.id == id) {
+                 if (one.car_id == id) {
                    return (
                      <div key={one.id} className="comment">
                        <p className="comment-text">{one.body}</p>
