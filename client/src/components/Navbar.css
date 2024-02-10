@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #f0f0f0; 
     height: 40px;
   }
@@ -13,6 +13,7 @@ header {
     display: flex;
     align-items: center; 
     height: 40px;
+    width: fit-content;
     
   }
   
@@ -30,15 +31,15 @@ header {
   }
   
   
-  div:last-child {
+  /* div:last-child {
     display: flex;
     align-items: center;
   }
-  
+   */
   button, a:last-child { 
     background-color: #007bff; 
     border: none;
-    padding: 5px 10px;
+    /* padding: 5px 5px; */
     border-radius: 5px; 
     color: white; 
     cursor: pointer; 

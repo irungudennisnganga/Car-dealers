@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {useParams } from 'react-router-dom'
 import Comment from './Comment'
 import './Eachcard.css'
+import Footer from './Footer'
 function Card() {
     const [car, setcar]=useState([])
     const [comment,setcomment]=useState([])
@@ -49,7 +50,7 @@ function Card() {
                 <p className="text"><b>Fuel Type</b> : {car.fuel_type}  </p>
                 <p className="text"><b>Millage </b>: {car.millage} </p> 
                 <p className="text"><b>Engine </b>: {car.engine_size}  </p>
-                <h3 className="text"><b>Price </b>: {car.price}  </h3>
+                <h3 className="text"><b>Price </b>: ksh {car.price}  </h3>
              </div>
            </div>
            <div>
@@ -57,23 +58,25 @@ function Card() {
            
           
             </div>
+           
            </div>
-         
+           
         </div>   
           <h3>COMMENTS</h3>
-          <Comment  />
+          <Comment  /><br />
            {
                 comment.map(one => {
                  if (one.id == id) {
                    return (
                      <div key={one.id} className="comment">
                        <p className="comment-text">{one.body}</p>
-                       <button onClick={() => handleClick(one.id)} className="comment-delete">delete</button>
+                       <button onClick={() => handleClick(one.id)} className="comment-delete">🚮</button>
                      </div>
                    );
                  }
                })
            }
+           <Footer />
     </>  
   )
 }

@@ -22,7 +22,7 @@ function Eachcar({cars}) {
               <div className="text-box">
                 <h3 className="heading"><b>Name </b> :{cars.name}  </h3>
                 <p className="text"><b>Type </b>: {cars.type} </p>
-                <p className="text"><b>Price</b> : {cars.price}  </p> 
+                <p className="text"><b>Price</b> : ksh {cars.price}  </p> 
              </div>
            </div>
           
