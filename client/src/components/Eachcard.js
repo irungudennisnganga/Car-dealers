@@ -7,12 +7,13 @@ function Card() {
     const [car, setcar]=useState([])
     const [comment,setcomment]=useState([])
     const {id} =useParams() 
-    
+    const [body,setComment]=useState(" ")
+
    useEffect(() => {
     fetch(`/cars/${id}`)
     .then(r => r.json())
     .then(car =>setcar(car))
-   },[])
+   },[id])
 
    useEffect(() =>{
     fetch(`/comments`)
@@ -38,7 +39,7 @@ function Card() {
         <div className="card">
        <div className="image-wrapper">
      
-          <img src={car.images} alt='bot' />
+          <img src={car.images} alt='car'/>
      
          </div>
            <div className="text-box-wrapper">
@@ -61,7 +62,7 @@ function Card() {
            
         </div>   
           <h3>COMMENTS</h3>
-          <Comment  /><br />
+          <Comment body={body} setComment={setComment}  /><br />
            {
                 comment.map(one => {
                  if (one.car_id == id) {

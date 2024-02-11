@@ -14,9 +14,9 @@ function Eachcar({cars}) {
     
   return (
 
-        <div className="cards">
+        <div onClick={ () =>  onHandleClick(cars.id)} className="cards">
        <div className="image-wrapper">
-          <img className='car' onClick={ () =>  onHandleClick(cars.id)} src={cars.images} alt='bot' />
+          <img className='car'  src={cars.images} alt='car' />
          </div>
            <div className="text-box-wrapper">
               <div className="text-box">
