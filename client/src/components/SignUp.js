@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import './Signup.css'
-import Footer from "./Footer";
+import { useNavigate } from 'react-router-dom';
 
 function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [email, setEmail] = useState("");
+  const navigate =useNavigate()
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,7 +32,7 @@ function SignUp({ setUser }) {
     } else {
       window.alert("Fill the information to create an account with us!")
     }
-   
+   navigate('/')
   }
 
   return (
@@ -71,7 +73,7 @@ function SignUp({ setUser }) {
         />
         <button type="submit">Sign Up 📡</button>
       </form>
-      <Footer />
+      
     </React.Fragment>
   );
 }

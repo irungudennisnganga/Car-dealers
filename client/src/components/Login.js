@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import './Login.css'
-import Footer from "./Footer";
+import { useNavigate } from 'react-router-dom';
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate= useNavigate()
 
   function handleSubmit(e) {
+
     e.preventDefault();
     if (username && password){
       fetch("/login", {
@@ -23,7 +25,7 @@ function Login({ setUser }) {
     } else {
       window.alert("Enter password and username to continue>>>")
     }
-  
+   navigate('/')
   }
 
   return (
@@ -48,7 +50,7 @@ function Login({ setUser }) {
         />
         <button type="submit">Login🔏</button>
       </form>
-      <Footer />
+    
     </React.Fragment>
   );
 }
