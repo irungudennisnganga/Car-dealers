@@ -2,7 +2,8 @@
 .cards {
     display: flex;
     flex-direction: column;
-    width: 900px; 
+    width: 450px; 
+    /* justify-content: space-between; */
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;

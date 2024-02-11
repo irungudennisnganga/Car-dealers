@@ -7,6 +7,7 @@
     margin: 0 auto; 
     color: blue;
     font-size: medium;
+    margin-top: 10%;
   }
   
 
@@ -23,7 +24,7 @@
 
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -50,4 +51,18 @@
     font-size: 20px;
     color: #4CAF50; 
     margin-right: 5px;
+  }
+  @media (max-width: 768px){
+    .form-get-in {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ddd; 
+      padding: 20px;
+      width: 280px;
+      margin: 0 auto; 
+      color: blue;
+      font-size: medium;
+      margin-top: 10%;
+    }
+    
   }
