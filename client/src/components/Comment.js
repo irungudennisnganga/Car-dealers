@@ -1,11 +1,11 @@
-import React, { useState }  from 'react'
+// import React, { useState }  from 'react'
 import {useParams } from 'react-router-dom'
 import './Comments.css'
-function Comment() {
+function Comment({body,setComment}) {
 
 let user_id=2
 // let body="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
-  const [body,setComment]=useState(" ")
+  
   const {id} =useParams() 
   function handleSubmit(e){
     e.preventDefault()
