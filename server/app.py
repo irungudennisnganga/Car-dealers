@@ -3,7 +3,7 @@
 from flask import request, session,jsonify,make_response
 from flask_restful import Resource
 
-from config import app, db, api
+from .config import app, db, api
 from models import User,Car,Comment
 
 
