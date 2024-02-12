@@ -24,7 +24,7 @@ function Card() {
    },[comment])
    
    function handleClick(id){
-    Window.alert("Delete comment")
+   alert("Delete comment")
       fetch(`/comments/${id}`,{
         method:"DELETE",
         headers:{
