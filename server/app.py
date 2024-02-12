@@ -144,6 +144,24 @@ class CarsFilter(Resource):
             return respomse
         else:
             return {'message':'No match of id'}
+        
+    def patch(self,id):
+        data = request.get_json()
+        car =Car.query.filter_by(id=id).first()
+        for attr in data:
+            setattr(car, attr, data[attr])
+
+        db.session.add(car)
+        db.session.commit()
+
+        response_dict = car.to_dict()
+
+        response = make_response(
+            jsonify(response_dict),
+            200
+        )
+
+        return response
 
 class CommentsData(Resource):
     def get(self):
