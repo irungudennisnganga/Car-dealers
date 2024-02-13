@@ -7,8 +7,9 @@ import Search from "./Search";
 function Home({ user }) {
   if (user) {
     return <>
-    <Allcars/>
     <Search/>
+    <Allcars/>
+    
     </>
     
   } else {
