@@ -24,8 +24,9 @@ class Signup(Resource):
         username = request.get_json()['username']
         email =request.get_json()['email']
         password = request.get_json()['password']
-
-        if username and password:
+        password_confirmation =request.get_json()['passwordConfirmation']
+        
+        if username and (password == password_confirmation):
 
             new_user = User(username=username ,email=email)
             new_user.password_hash = password

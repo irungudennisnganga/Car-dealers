@@ -20,12 +20,15 @@ function Login({ setUser }) {
       }).then((r) => {
         if (r.ok) {
           r.json().then((user) => setUser(user));
+          navigate('/')
+        } else{
+          <h1>Not able to login</h1>
         }
       });
     } else {
       window.alert("Enter password and username to continue>>>")
     }
-   navigate('/')
+   
   }
 
   return (

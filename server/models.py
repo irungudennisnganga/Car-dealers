@@ -3,7 +3,7 @@ from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import validates 
 import re
-from config import db, bcrypt
+from .config import db, bcrypt
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -48,7 +48,7 @@ class User(db.Model, SerializerMixin):
     def validate_password(self, key, _password_hash):
         if not _password_hash:
             raise AssertionError('No password provided')
-        if not re.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$", _password_hash):
+        if not re.match("^(?=.*[a-z])[A-Za-z\d@$!%*#?&]{8,}", _password_hash):
             raise AssertionError('Provide a password with a Lowercase letter, Uppercase letter, At least one special character') 
         return _password_hash 
 
