@@ -11,7 +11,7 @@ let user_id=2
     e.preventDefault()
     // console.log(comment)
     let car_id=id
-    fetch(`/comments`,{
+    fetch(`https://cardealersgunicorn-app-app.onrender.com/comments`,{
       method:"POST",
       headers:{
         "content-Type":"application/json"

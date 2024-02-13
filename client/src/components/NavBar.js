@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function NavBar({ user, setUser }) {
   const history =useNavigate()
   function handleLogoutClick() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
+    fetch("https://cardealersgunicorn-app-app.onrender.com/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
         history('/login')

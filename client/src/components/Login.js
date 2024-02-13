@@ -11,7 +11,7 @@ function Login({ setUser }) {
 
     e.preventDefault();
     if (username && password){
-      fetch("/login", {
+      fetch("https://cardealersgunicorn-app-app.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

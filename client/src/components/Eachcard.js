@@ -12,20 +12,20 @@ function Card() {
     const [body,setComment]=useState(" ")
 
    useEffect(() => {
-    fetch(`/cars/${id}`)
+    fetch(`https://cardealersgunicorn-app-app.onrender.com/cars/${id}`)
     .then(r => r.json())
     .then(car =>setcar(car))
    },[id])
 
    useEffect(() =>{
-    fetch(`/comments`)
+    fetch(`https://cardealersgunicorn-app-app.onrender.com/comments`)
     .then(r => r.json())
     .then(comment =>setcomment(comment))
    },[comment])
    
    function handleClick(id){
    alert("Delete comment")
-      fetch(`/comments/${id}`,{
+      fetch(`https://cardealersgunicorn-app-app.onrender.com/comments/${id}`,{
         method:"DELETE",
         headers:{
           "content-Type":"application.json"
