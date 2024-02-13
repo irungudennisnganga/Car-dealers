@@ -2,10 +2,14 @@ import Allcars from "./Allcars";
 import React  from "react";
 import { Link } from "react-router-dom";
 import './Home.css'
+import Search from "./Search";
 
 function Home({ user }) {
   if (user) {
-    return <Allcars />
+    return <>
+    <Allcars/>
+    <Search/>
+    </>
     
   } else {
     return (
