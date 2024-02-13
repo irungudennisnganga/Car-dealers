@@ -8,7 +8,7 @@ function Eachcar({cars}) {
  
     function onHandleClick(id) {
          // console.log(id)
-         navigate(`/cars/${id}`)
+         navigate(`https://cardealersgunicorn-app-app.onrender.com/cars/${id}`)
  }
 
     

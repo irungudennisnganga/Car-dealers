@@ -6,7 +6,7 @@ function Allcars() {
     const [cars, setcars]=useState([])
     
     useEffect(() =>{
-        fetch("/cars")
+        fetch("https://cardealersgunicorn-app-app.onrender.com/cars")
         .then(r =>r.json())
         .then(data =>setcars(data))
     },[])

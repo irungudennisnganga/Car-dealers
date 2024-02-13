@@ -18,7 +18,7 @@ function Card() {
    },[id])
 
    useEffect(() =>{
-    fetch(`/comments`)
+    fetch(`https://cardealersgunicorn-app-app.onrender.com/comments`)
     .then(r => r.json())
     .then(comment =>setcomment(comment))
    },[comment])

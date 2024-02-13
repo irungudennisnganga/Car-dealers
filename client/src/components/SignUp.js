@@ -13,7 +13,7 @@ function SignUp({ setUser }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (username && password && passwordConfirmation){
-      fetch("/signup", {
+      fetch("https://cardealersgunicorn-app-app.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

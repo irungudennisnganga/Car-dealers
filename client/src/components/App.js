@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("/check_session").then((r) => {
+    fetch("https://cardealersgunicorn-app-app.onrender.com/check_session").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }

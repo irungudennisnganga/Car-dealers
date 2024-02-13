@@ -29,7 +29,7 @@ const Addcar = () => {
       price
     };
 
-    fetch('/cars', {
+    fetch('https://cardealersgunicorn-app-app.onrender.com/cars', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
