@@ -3,7 +3,7 @@ from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import validates 
 import re
-from .config import db, bcrypt
+from config import db, bcrypt
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -44,13 +44,13 @@ class User(db.Model, SerializerMixin):
             raise AssertionError('Provided email is not an email address') 
         return email 
      
-    @validates('password')    
-    def validate_password(self, key, password):
-        if not password:
+    @validates('_password_hash')    
+    def validate_password(self, key, _password_hash):
+        if not _password_hash:
             raise AssertionError('No password provided')
-        if not re.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$", password):
+        if not re.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$", _password_hash):
             raise AssertionError('Provide a password with a Lowercase letter, Uppercase letter, At least one special character') 
-        return password 
+        return _password_hash 
 
     def __repr__(self):
         return f'User {self.username}, ID: {self.id}'
@@ -76,14 +76,7 @@ class Car(db.Model, SerializerMixin):
     cars =db.relationship("Comment", backref='cars')
     serialize_rules = ('-comments.cars','-cars')
     
-    # @validates('price')
-    # def validate_pice(self,key,price):
-    #     if not price:
-    #         raise AssertionError("Enter price")
-    #     if not  price  1000000:
-    #         raise AssertionError("Enter price below 10,000,000")    
-
-
+ 
 
 class Comment(db.Model, SerializerMixin):
     __tablename__='comments'
