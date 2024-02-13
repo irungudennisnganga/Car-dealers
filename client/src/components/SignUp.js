@@ -22,17 +22,21 @@ function SignUp({ setUser }) {
           username,
           email,
           password,
-          password_confirmation: passwordConfirmation,
+          passwordConfirmation,
         }),
       }).then((r) => {
         if (r.ok) {
           r.json().then((user) => setUser(user));
+          navigate('/')
+        }else{
+          <h1>Not able to sign up</h1>
         }
       });
+      
     } else {
       window.alert("Fill the information to create an account with us!")
     }
-   navigate('/')
+   
   }
 
   return (
