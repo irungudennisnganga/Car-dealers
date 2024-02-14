@@ -1,6 +1,16 @@
 # Car Dealer 
  This project is a project proposed to making a platform whereby it allows for users to; browse, search and select vehicles. The website website incorporates a React frontend and a Flask API backend.
 
+ 
+## How to use
+-Login/sign up
+-vehicles should be displayed. There is also an option to search.
+-Once you select a vehicle, you should be able to see the selected image enter its own page and show more information.
+- You are able to comment
+- There is also a function to allow you to add car
+- Once done, you are allowed to Log out with the log out button
+-You are also able to move between pages such as the home page and the about page.
+
 ## Features
 
 ### 1. Home Page
@@ -63,9 +73,6 @@
 - **React.js:** The frontend of the website is built using React.js.
 - **React Router:** allows for navigation between different pages.
 - **Fetch API:** The Fetch API is used to make HTTP requests to the server to fetch and send data.
-- **Node.js:** The backend of the website is used by Node.js.
-- **Express.js:** Express.js is used as the web application framework for Node.js to handle HTTP requests and responses.
-- **MongoDB:** MongoDB is used as the database to store car and user information.
 - **CSS:** Used for the styling
 
 ## Getting Started
@@ -77,14 +84,6 @@ To run the project locally, follow these steps:
 3. Start the development server by running `npm start`.
 5. Open your web browser.
 
-## How to use
--Login/sign up
--vehicles should be displayed. There is also an option to search.
--Once you select a vehicle, you should be able to see the selected image enter its own page and show more information.
-- You are able to comment
-- There is also a function to allow you to add car
-- Once done, you are allowed to Log out with the log out button
--You are also able to move between pages such as the home page and the about page.
 
 ## Contributors
 
