@@ -1,6 +1,14 @@
 # Car Dealer 
  This project is a project proposed to making a platform whereby it allows for users to; browse, search and select vehicles. The website website incorporates a React frontend and a Flask API backend.
 
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Start the development server by running `npm start`.
+5. Open your web browser.
  
 ## How to use
 -Login/sign up
@@ -74,16 +82,6 @@
 - **React Router:** allows for navigation between different pages.
 - **Fetch API:** The Fetch API is used to make HTTP requests to the server to fetch and send data.
 - **CSS:** Used for the styling
-
-## Getting Started
-
-To run the project locally, follow these steps:
-
-1. Clone the repository to your local machine.
-2. Navigate to the project directory in your terminal.
-3. Start the development server by running `npm start`.
-5. Open your web browser.
-
 
 ## Contributors
 
